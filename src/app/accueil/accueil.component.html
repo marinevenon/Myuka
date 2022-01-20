@@ -1,0 +1,119 @@
+<style>
+  h4 {
+    background-color: #87bb34;
+    color: white;
+    border-radius: 20px;
+  }
+
+  .navbar {
+    background-color: #87bb34;
+    text-align: center;
+    color: white;
+    justify-content: center;
+  }
+
+</style>
+
+<header>
+  <div class="navbar">
+        <h1>Myuka</h1> 
+  </div>
+</header>
+
+
+<main role="main">
+
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h2>Obtenez des information sur les produits alimentaires</h2>
+      <p class="lead text-muted">Entrez un code barre</p>
+
+    <div class="form-group">
+    <input type="text" class="form-control" id="codeSaisi" [formControl]="champSaisi"> 
+    </div>
+
+      <p>
+        <a (click)="affcherChampSaisi()" href="#" class="btn btn-primary my-2">Valider</a>
+      </p>
+    </div>
+  </section>
+
+  <div class="album bg-light">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body text-center">
+                <h4>Photo produit : </h4>
+              <img width="300" src="{{imageProduit}}" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body text-center">
+                <h4>Ingrédients : </h4>
+              <p class="card-text">{{ingredients}}</p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-12">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body text-center">
+                <h4>Allergènes : </h4>
+              <p class="card-text">{{allergenes}}</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body text-center">
+                <h4>Nova : </h4>
+                <img width="65" src="{{imagePath2}}" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body text-center">
+                <h4>Nutri-score : </h4>
+                <img src="{{imagePath}}" width="200" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body text-center">
+                <h4>Huile de palme : </h4>
+              <img width="107" src="{{imagePath3}}" alt="">
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          <div class="card mb-4 shadow-sm">
+            <div class="card-body text-center">
+                <h4>Infos distributeur : </h4>
+              <p class="card-text">Fabricant : {{importation}} <br>Importation : {{fabricant}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="text-muted">
+  <div class="container">
+    <p class="float-right">
+      <a href="#">Back to top</a>
+    </p>
+    <p>Ce site a été créé par &copy;Marine</p>
+  </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="/docs/4.5/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/docs/4.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
